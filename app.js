@@ -25,6 +25,6 @@ sequelize.sync()
 // sequelize.sync({force:true})
 .then(()=>{
     console.log(process.env.PORT)
-    app.listen(process.env.PORT)
+    app.listen(process.env.PORT || 4000 )
 })
 .catch(err=>{console.log(err)});
